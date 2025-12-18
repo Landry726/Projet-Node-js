@@ -6,13 +6,14 @@ const clientRoute = require('./Routes/Routes_Client');
 
 app.use(cors());
 app.use(body.json());
-// Middleware pour les requêtes JSONr parse
+
+// Middleware pour les requêtes JSON parse
 app.use(express.json());
 
-// Utilisation des routes
+//Routes
 app.use('/', clientRoute);
 
-// Démarrage du serveur
+//Serveur
 const PORT = process.env.PORT || 3000;
 app.listen(3000, () => {
   console.log(` Le Server est lancé sur le port ${PORT}`);

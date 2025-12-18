@@ -15,7 +15,7 @@ exports.createClient = async (req, res) => {
 exports.getAllClient = async (req, res) => {
   try {
     const users = await Client.findAll();
-    console.log(users);
+    // console.log(users);
     res.json(users);
   } catch (error) {
     console.error('Error fetching client in controllers :', error);

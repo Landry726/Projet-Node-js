@@ -1,12 +1,13 @@
 // Modèle Sequelize pour la table User
 const { DataTypes, Sequelize } = require('sequelize');
-const sequelize = require('../Config/Database');
+const sequelize = require('../config/Database');
 
 const Client = sequelize.define('Clients', {
     id: {
       type: Sequelize.INTEGER,
       primaryKey: true,
-      unique: true
+      unique: true,
+      autoIncrement: true
     },
     nom: {
       type: Sequelize.STRING,
@@ -16,7 +17,7 @@ const Client = sequelize.define('Clients', {
     solde: {
       type: Sequelize.INTEGER,
       allowNull: false,
-      unique: true
+      //unique: true
     }
   });
 
